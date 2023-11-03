@@ -1,0 +1,22 @@
+<div class="author">
+    <h1 class="author__heading">Bienvenidos a mi pagina web sobre noticias </h1>
+<p class="author__body"> Pagina creada con Node js</p>
+
+</div>
+<img class="hero" width="981" height="528" src="/noticias.jpg" alt="">
+
+
+<section class="article-ul">
+    <h2 class="article__heading">Ultimas noticias</h2>
+    <ul class="article-ul">
+        <% posts.forEach(post=>{%>
+                <li>
+                    <a href=""><span><%= post.titulo %></span>
+                    <span class="article-list__date"><%= post.fechaCreaion %></span>
+                    </a>
+                </li>
+       <% }) %>
+    </ul>
+</section>
+
+
