@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 require('dotenv').config();
 const connectDb=require('./server/config/connectDb')
+const mongoStore=require('connect-mongo')
 
 const app = express();
 
@@ -14,6 +15,17 @@ connectDb()
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
+
+app.use(session({
+    secret:'teclado pizza',
+    resave:false,
+    saveUninitialized:true,
+    store:mongoStore.create({
+        mongoUrl:process.env.MONGO_URL
+    })
+}))
+
+
 
 app.use(express.static('public'))
 

@@ -21,4 +21,4 @@ const PublicacionesSchema=new Schema({
     },
 })
 
-module.exports=mongoose.model('Publicaciones',PublicacionesSchema)
+module.exports=mongoose.model('PublicacionesTM',PublicacionesSchema)

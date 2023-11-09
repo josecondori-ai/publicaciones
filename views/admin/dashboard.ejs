@@ -1,0 +1,14 @@
+<div class="admin-title">
+    <h2>Publicaciones</h2>
+    <a href="/add-post" class="button">Agregar nueva publicaciones</a>
+</div>
+
+<ul class="admin-posts">
+    <% data.forEach( post =>{%>
+        <li>
+           <%= post.titulo %>
+        <%  })%> 
+        </li>
+        
+
+</ul>

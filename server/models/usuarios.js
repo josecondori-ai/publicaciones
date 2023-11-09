@@ -14,4 +14,4 @@ const usuariosSchema=new Schema({
     }
 })
 
-module.exports=mongoose.model('Usuarios',usuariosSchema)
+module.exports=mongoose.model('UsuariosTM',usuariosSchema)
